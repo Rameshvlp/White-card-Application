@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb+srv://akshairajpsg:12345@cluster0.qodavhi.mongodb.net/CRUD_Try1').then(()=>{
+mongoose.connect(process.env.MONGODB_URI).then(()=>{
         console.log("Successfully Connected to MongoDB")
     }).catch((err)=>{
         console.log(err);
